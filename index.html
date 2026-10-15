@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamago — Belajar bahasa Jepang dari nol, sampai JLPT N1</title>
+<meta name="description" content="Tamago (たまご) mengajarkan bahasa Jepang dari huruf pertama: 46 hiragana, 46 katakana, kanji, dan seluruh tangga JLPT N5–N1 dengan angka yang sebenarnya. Mulai gratis dari あ.">
+<meta name="theme-color" content="#dceeff">
+<link rel="icon" href="assets/mascot-avatar.png">
+<link rel="apple-touch-icon" href="assets/mascot-avatar.png">
+<link rel="preload" href="fonts/bowlby-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dela-kana.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- ── marquee ───────────────────────────────────────────────────────────── -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Ujian JLPT 2026 · 5 Juli &amp; 6 Desember</span>
+    <span>ひらがな 46 huruf · カタカナ 46 huruf</span>
+    <span>N5 → N1 · angka sebenarnya, bukan janji</span>
+    <span>Belajar inti gratis</span>
+    <span>Ujian JLPT 2026 · 5 Juli &amp; 6 Desember</span>
+    <span>ひらがな 46 huruf · カタカナ 46 huruf</span>
+    <span>N5 → N1 · angka sebenarnya, bukan janji</span>
+    <span>Belajar inti gratis</span>
+  </div>
+</div>
+
+<!-- ── nav ───────────────────────────────────────────────────────────────── -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#atas">
+      <span class="brand__badge"><img src="assets/mascot-avatar.png" alt="" width="256" height="256"></span>
+      <span class="brand__word">Tamago<i>たまご</i></span>
+    </a>
+    <nav aria-label="Navigasi utama">
+      <ul class="nav__links">
+        <li><a href="#kana">Kana</a></li>
+        <li><a href="#jlpt">JLPT</a></li>
+        <li><a href="#kanji">Kanji</a></li>
+        <li><a href="#podcast">Podcast</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--solid" href="#mulai">Mulai Belajar</a>
+  </div>
+</header>
+
+<main id="atas">
+
+<!-- ── hero ──────────────────────────────────────────────────────────────── -->
+<section class="hero" aria-labelledby="hero-title">
+  <svg class="ribbon" viewBox="0 0 1200 430" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path class="rb rb-1" d="M-80 316 C 150 120 350 430 600 306 S 1000 96 1280 268" stroke="#1f4f8f" stroke-width="132"/>
+      <path class="rb rb-2" d="M-80 316 C 150 120 350 430 600 306 S 1000 96 1280 268" stroke="#4da2ff" stroke-width="116"/>
+      <path class="rb rb-3" d="M-80 316 C 150 120 350 430 600 306 S 1000 96 1280 268" stroke="#79bcff" stroke-width="66"/>
+      <path class="rb rb-4" d="M-80 316 C 150 120 350 430 600 306 S 1000 96 1280 268" stroke="#b7dbff" stroke-width="26"/>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".55">
+      <path class="rb rb-1" d="M-60 372 C 170 176 370 486 620 362 S 1020 152 1300 324" stroke="#1f4f8f" stroke-width="84"/>
+      <path class="rb rb-2" d="M-60 372 C 170 176 370 486 620 362 S 1020 152 1300 324" stroke="#4da2ff" stroke-width="72"/>
+      <path class="rb rb-3" d="M-60 372 C 170 176 370 486 620 362 S 1020 152 1300 324" stroke="#9ecbff" stroke-width="36"/>
+    </g>
+  </svg>
+
+  <span class="sticker sticker--egg" aria-hidden="true"></span>
+  <span class="sticker sticker--bubble" aria-hidden="true">がんばれ</span>
+  <span class="sticker sticker--mint" aria-hidden="true"></span>
+  <span class="sticker sticker--violet" aria-hidden="true">N5 → N1</span>
+
+  <div class="wrap hero__inner">
+    <h1 id="hero-title" class="hero__head">Mulai dari satu huruf</h1>
+
+    <div class="hero__kana" role="img" aria-label="Lima huruf hiragana pertama: a, i, u, e, o">
+      <span class="kana-chip">あ</span>
+      <span class="kana-chip">い</span>
+      <span class="kana-chip">う</span>
+      <span class="kana-chip">え</span>
+      <span class="kana-chip">お</span>
+    </div>
+
+    <p class="hero__say">Ini huruf pertama kamu. <b>ひらがな punya 46</b>, dan hampir semua orang bisa hafal semuanya dalam dua minggu.</p>
+
+    <div class="hero__actions">
+      <a class="btn btn--solid btn--big" href="#kana">Mulai dari あ — gratis</a>
+      <a class="btn btn--ghost" href="#jlpt">Lihat tangga JLPT</a>
+    </div>
+
+    <p class="hero__meta">Tanpa kartu kredit · tanpa unduhan · langsung di peramban</p>
+  </div>
+</section>
+
+<!-- ── kana ──────────────────────────────────────────────────────────────── -->
+<section class="band band--paper" id="kana" aria-labelledby="kana-title">
+  <div class="wrap band__inner">
+   <div class="kana-layout">
+    <div class="kana-copy reveal">
+      <h2 id="kana-title">46 huruf dulu, baru kata</h2>
+      <p>Bahasa Jepang tidak pakai abjad Latin. Ada tiga tulisan, dan yang pertama kamu pelajari adalah <b>hiragana</b>: 46 huruf dasar untuk semua bunyi bahasa Jepang. <b>Katakana</b> memakai 46 huruf yang sama bunyinya, untuk kata serapan. Kalau dua tabel ini sudah di tangan, kamu bisa membaca apa pun yang tertulis dalam kana, walau belum tahu artinya.</p>
+      <p class="kana-counter">Sudah kamu tandai: <b id="kanaCount">0</b> dari 46. <span>Coba klik beberapa, begini rasanya dinding catatan itu terisi.</span></p>
+      <ul class="kana-facts">
+        <li>46 huruf dasar</li>
+        <li>dakuten: か → が, 25 bunyi baru</li>
+        <li>yōon: き + ゃ = きゃ</li>
+        <li>っ sokuon, jeda bunyi</li>
+        <li>dari kanji kursif abad ke-9</li>
+        <li>katakana: 46 huruf, bunyi sama</li>
+      </ul>
+    </div>
+
+    <div class="kana-grid reveal" id="kanaGrid" role="group" aria-label="Tabel hiragana — klik untuk menandai huruf yang sudah kamu hafal">
+      <span>あ</span><span>い</span><span>う</span><span>え</span><span>お</span>
+      <span>か</span><span>き</span><span>く</span><span>け</span><span>こ</span>
+      <span>さ</span><span>し</span><span>す</span><span>せ</span><span>そ</span>
+      <span>た</span><span>ち</span><span>つ</span><span>て</span><span>と</span>
+      <span>な</span><span>に</span><span>ぬ</span><span>ね</span><span>の</span>
+      <span>は</span><span>ひ</span><span>ふ</span><span>へ</span><span>ほ</span>
+      <span>ま</span><span>み</span><span>む</span><span>め</span><span>も</span>
+      <span>や</span><span data-empty="true"></span><span>ゆ</span><span data-empty="true"></span><span>よ</span>
+      <span>ら</span><span>り</span><span>る</span><span>れ</span><span>ろ</span>
+      <span>わ</span><span data-empty="true"></span><span data-empty="true"></span><span data-empty="true"></span><span>を</span>
+      <span>ん</span><span data-empty="true"></span><span data-empty="true"></span><span data-empty="true"></span><span data-empty="true"></span>
+    </div>
+   </div>
+  </div>
+</section>
+
+<!-- ── JLPT ladder ───────────────────────────────────────────────────────── -->
+<section class="band band--sky" id="jlpt" aria-labelledby="jlpt-title">
+  <div class="wrap band__inner">
+    <div class="sec-head sec-head--wide reveal">
+      <h2 id="jlpt-title">Tangga JLPT, dengan angka sebenarnya</h2>
+      <p>JLPT punya lima level. N5 yang paling mudah, N1 yang paling berat. Sejak 2010 daftar kata resminya tidak lagi diterbitkan, jadi angka di bawah adalah perkiraan komunitas yang dipakai luas, bukan janji pemasaran. Perhatikan kolom <em>kata baru</em>: itu tambahan yang benar-benar kamu hafal di level itu.</p>
+    </div>
+
+    <div class="ladder">
+
+      <article class="rung reveal">
+        <div class="rung__level">
+          <span class="rung__code">N5</span>
+          <span class="rung__name">Pemula · setara kelas 1–2 SD</span>
+        </div>
+        <div class="rung__bar">
+          <div class="rung__track"><div class="rung__fill" style="width:8%;background:var(--mint)">8%</div></div>
+          <ul class="rung__stats">
+            <li><b>±800</b> kosakata</li>
+            <li><b>±100</b> kanji</li>
+            <li><b>+800</b> kata baru</li>
+          </ul>
+          <p class="rung__note">Ujian: kosakata 20 menit, tata bahasa &amp; bacaan 40 menit, mendengar 30 menit. <em>Kurang lebih 300–450 jam belajar.</em></p>
+        </div>
+      </article>
+
+      <article class="rung reveal">
+        <div class="rung__level">
+          <span class="rung__code">N4</span>
+          <span class="rung__name">Dasar · setara kelas 3–4 SD</span>
+        </div>
+        <div class="rung__bar">
+          <div class="rung__track"><div class="rung__fill" style="width:15%;background:var(--lavender)">15%</div></div>
+          <ul class="rung__stats">
+            <li><b>±1.500</b> kosakata</li>
+            <li><b>±300</b> kanji</li>
+            <li><b>+700</b> kata baru</li>
+          </ul>
+          <p class="rung__note">Ujian: 25 menit, 55 menit, 35 menit. Sudah bisa mengikuti percakapan lambat tentang hal sehari-hari.</p>
+        </div>
+      </article>
+
+      <article class="rung reveal">
+        <div class="rung__level">
+          <span class="rung__code">N3</span>
+          <span class="rung__name">Menengah · setara kelas 6 SD</span>
+        </div>
+        <div class="rung__bar">
+          <div class="rung__track"><div class="rung__fill" style="width:37%;background:var(--sun)">37%</div></div>
+          <ul class="rung__stats">
+            <li><b>±3.750</b> kosakata</li>
+            <li><b>±650</b> kanji</li>
+            <li><b>+2.250</b> kata baru</li>
+          </ul>
+          <p class="rung__note"><em>Lompatan terberat.</em> Di N3 kamu menambah lebih banyak kata daripada N5 dan N4 digabung. Ujian: 30 + 70 + 40 menit.</p>
+        </div>
+      </article>
+
+      <article class="rung reveal">
+        <div class="rung__level">
+          <span class="rung__code">N2</span>
+          <span class="rung__name">Lanjut · setara SMP</span>
+        </div>
+        <div class="rung__bar">
+          <div class="rung__track"><div class="rung__fill" style="width:60%;background:var(--blue)">60%</div></div>
+          <ul class="rung__stats">
+            <li><b>±6.000</b> kosakata</li>
+            <li><b>±1.000</b> kanji</li>
+            <li><b>+2.250</b> kata baru</li>
+          </ul>
+          <p class="rung__note">Sering jadi syarat kerja di Jepang. Ujian: tata bahasa &amp; bacaan 105 menit, mendengar 50 menit.</p>
+        </div>
+      </article>
+
+      <article class="rung reveal">
+        <div class="rung__level">
+          <span class="rung__code">N1</span>
+          <span class="rung__name">Mahir · setara lulus SMA</span>
+        </div>
+        <div class="rung__bar">
+          <div class="rung__track"><div class="rung__fill" style="width:100%;background:var(--violet);color:#fff">100%</div></div>
+          <ul class="rung__stats">
+            <li><b>±10.000</b> kosakata</li>
+            <li><b>±2.000+</b> kanji</li>
+            <li><b>+4.000</b> kata baru</li>
+          </ul>
+          <p class="rung__note">Mencakup hampir seluruh 2.136 kanji jōyō. Ujian: 110 menit + 55 menit. Seluruh JLPT 100% pilihan ganda; kanji tidak pernah ditulis tangan di ujian.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="reveal" style="margin:0;font-size:13px;max-width:70ch">
+      Batang di atas menunjukkan porsi kosakata kumulatif terhadap N1. Jalur total ke kemahiran profesional di kelas formal diperkirakan sekitar 2.200 jam; tiap level kurang lebih dua kali lipat level sebelumnya.
+    </p>
+  </div>
+</section>
+
+<!-- ── kanji payoff ──────────────────────────────────────────────────────── -->
+<section class="band band--paper" id="kanji" aria-labelledby="kanji-title">
+  <div class="wrap band__inner">
+    <div class="sec-head sec-head--wide reveal">
+      <h2 id="kanji-title">Kenapa kanji tidak seburuk kelihatannya</h2>
+      <p>Kanji bukan daftar tak berujung. Kanji yang paling sering muncul menutup sebagian besar teks, jadi usaha terbesarmu dibayar paling awal.</p>
+    </div>
+
+    <div class="payoff">
+      <div class="sentence reveal">
+        <p lang="ja"><mark>日本語</mark>を勉強しています。<mark>毎日</mark>少しずつ<mark>新</mark>しい言葉を覚えます。</p>
+        <small>Saya sedang belajar bahasa Jepang. Setiap hari saya menghafal sedikit-sedikit kata baru.</small>
+        <small style="opacity:.7">Kanji yang ditandai termasuk 500 kanji yang paling sering muncul.</small>
+      </div>
+
+      <div class="bars reveal">
+        <div class="bar">
+          <div class="bar__label"><span>500 kanji paling sering</span><b>±80%</b></div>
+          <div class="bar__rail"><div class="bar__fill" style="width:80%;background:var(--mint)"></div></div>
+        </div>
+        <div class="bar">
+          <div class="bar__label"><span>1.000 kanji paling sering</span><b>&gt;90%</b></div>
+          <div class="bar__rail"><div class="bar__fill" style="width:92%;background:var(--sun)"></div></div>
+        </div>
+        <div class="bar">
+          <div class="bar__label"><span>Kanji jōyō resmi</span><b>2.136</b></div>
+          <div class="bar__rail"><div class="bar__fill" style="width:100%;background:var(--lavender)"></div></div>
+        </div>
+        <p style="margin:0;font-size:13px;max-width:46ch">Artinya: 500 kanji pertama sudah membawamu melewati sebagian besar teks Jepang sehari-hari. N5 hanya butuh ±100.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── what you get ──────────────────────────────────────────────────────── -->
+<section class="band band--gray" id="materi" aria-labelledby="materi-title">
+  <div class="wrap band__inner">
+    <div class="sec-head sec-head--wide reveal">
+      <h2 id="materi-title">Semua yang kamu pelajari</h2>
+      <p>Enam bagian, satu jalur: dari huruf pertama sampai ujian N1.</p>
+    </div>
+
+    <div class="kit">
+      <article class="kit__card reveal">
+        <span class="glyph" aria-hidden="true">あ</span>
+        <h3>Hiragana &amp; Katakana</h3>
+        <p>92 huruf, urut gojūon, dengan latihan baca. Fondasinya selesai lebih dulu sebelum apa pun.</p>
+      </article>
+      <article class="kit__card reveal">
+        <span class="glyph" aria-hidden="true">漢</span>
+        <h3>Kanji</h3>
+        <p>Dari 100 kanji N5 naik ke ±2.000. Tiap kanji: arti, cara baca, dan contoh kata.</p>
+      </article>
+      <article class="kit__card reveal">
+        <span class="glyph" aria-hidden="true">語</span>
+        <h3>Kosakata</h3>
+        <p>Kata disusun sesuai level JLPT, jadi kamu tidak menghafal kata yang belum kamu butuhkan.</p>
+      </article>
+      <article class="kit__card reveal">
+        <span class="glyph" aria-hidden="true">文</span>
+        <h3>Tata bahasa</h3>
+        <p>Pola kalimat dengan penjelasan bahasa Indonesia, bukan terjemahan mesin.</p>
+      </article>
+      <article class="kit__card reveal">
+        <span class="glyph" aria-hidden="true">聴</span>
+        <h3>Mendengar</h3>
+        <p>Latihan audio sesuai format ujian, termasuk bagian mendengar yang jadi jebakan banyak peserta.</p>
+      </article>
+      <article class="kit__card reveal">
+        <span class="glyph" aria-hidden="true">試</span>
+        <h3>Simulasi ujian</h3>
+        <p>Latihan pilihan ganda dengan komposisi dan durasi menit yang sama seperti JLPT asli.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── podcast / extras ──────────────────────────────────────────────────── -->
+<section class="band band--paper" id="podcast" aria-labelledby="podcast-title">
+  <div class="wrap band__inner">
+    <div class="sec-head sec-head--wide reveal">
+      <h2 id="podcast-title">Gratis inti, ekstra kalau mau</h2>
+      <p>Semua materi di atas bisa kamu pakai tanpa bayar. Kalau mau lebih, ada podcast dan kelas terarah.</p>
+    </div>
+
+    <div class="extras">
+      <div class="episode reveal">
+        <div class="episode__row">
+          <span class="episode__num">01</span>
+          <span class="episode__t">あ・い・う・え・お: lima bunyi pertama<br><span class="episode__d">12 menit · contoh episode</span></span>
+          <button class="episode__play" type="button" aria-pressed="false" aria-label="Putar contoh episode 1">▶</button>
+        </div>
+        <div class="episode__row">
+          <span class="episode__num">02</span>
+          <span class="episode__t">Dakuten: kenapa か jadi が<br><span class="episode__d">14 menit · contoh episode</span></span>
+          <button class="episode__play" type="button" aria-pressed="false" aria-label="Putar contoh episode 2">▶</button>
+        </div>
+        <div class="episode__row">
+          <span class="episode__num">03</span>
+          <span class="episode__t">100 kanji pertama N5, satu per satu<br><span class="episode__d">21 menit · contoh episode</span></span>
+          <button class="episode__play" type="button" aria-pressed="false" aria-label="Putar contoh episode 3">▶</button>
+        </div>
+      </div>
+
+      <div class="extras__side reveal">
+        <span class="free-tag">Gratis · 92 huruf kana</span>
+        <span class="free-tag">Gratis · kosakata &amp; kanji N5</span>
+        <span class="free-tag">Gratis · simulasi ujian N5</span>
+        <span class="free-tag free-tag--paid">Ekstra berbayar · podcast mingguan</span>
+        <span class="free-tag free-tag--paid">Ekstra berbayar · kelas terarah N4–N1</span>
+        <p style="margin:8px 0 0;font-size:13px;max-width:44ch">Episodenya contoh isi; belum ada pemutar sungguhan di halaman ini. Yang berbayar tidak pernah kamu perlukan untuk mulai.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── close ─────────────────────────────────────────────────────────────── -->
+<section class="close" id="mulai" aria-labelledby="close-title">
+  <div class="wrap close__inner">
+    <h2 id="close-title" class="reveal">Mulai dari あ</h2>
+    <p class="hero__say reveal" style="max-width:34ch">Satu huruf hari ini. Empat puluh enam minggu dari sekarang kamu sedang membaca teks Jepang sungguhan.</p>
+    <a class="btn btn--solid btn--big reveal" href="#kana">Mulai Belajar — gratis</a>
+    <div class="close__dates reveal">
+      <span>JLPT berikutnya: Minggu, 5 Juli 2026</span>
+      <span>Lalu: Minggu, 6 Desember 2026</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── footer ────────────────────────────────────────────────────────────── -->
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <span class="foot__word">Tamago たまご</span>
+    <p>Bahasa Jepang dari nol untuk pemula Indonesia. Angka level di halaman ini adalah perkiraan komunitas sejak JLPT berhenti menerbitkan daftar resmi pada 2010.</p>
+    <nav aria-label="Tautan kaki">
+      <a href="#kana">Kana</a>
+      <a href="#jlpt">JLPT</a>
+      <a href="#kanji">Kanji</a>
+      <a href="#podcast">Podcast</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

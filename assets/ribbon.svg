@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430" role="img" aria-label="Pita biru melengkung di belakang huruf kana">
+  <!-- Inflatable tube built from concentric flat strokes: no gradients, no grain. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-80 316 C 150 120 350 430 600 306 S 1000 96 1280 268" stroke="#1f4f8f" stroke-width="132" />
+    <path d="M-80 316 C 150 120 350 430 600 306 S 1000 96 1280 268" stroke="#4da2ff" stroke-width="116" />
+    <path d="M-80 316 C 150 120 350 430 600 306 S 1000 96 1280 268" stroke="#79bcff" stroke-width="66" />
+    <path d="M-80 316 C 150 120 350 430 600 306 S 1000 96 1280 268" stroke="#b7dbff" stroke-width="26" />
+  </g>
+</svg>
